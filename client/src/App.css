@@ -1,0 +1,85 @@
+body {
+    overflow-x: hidden;
+}
+
+.Background {
+    z-index: 1;
+}
+
+.Background:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(images/background.jpg);
+     background-repeat: no-repeat;
+     background-size: 100%;
+     opacity: 0.7;
+     filter:alpha(opacity=70);
+     height:100%;
+     width:100%;
+  }
+
+.App {
+   margin:auto;
+   z-index:-1;
+   opacity: 1;
+   filter:alpha(opacity=100);
+}
+
+.logoImage {
+    width:50px;
+    height:50px;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+#as-react-datatable-container select {
+    width: 70px !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    margin: 0px 0px 10px 30px;
+  }
